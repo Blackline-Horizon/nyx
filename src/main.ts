@@ -14,6 +14,8 @@ if (process.env.NODE_ENV === 'production') {
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.enableCors();
+
   // Get the port from the environment variable (default to 3001 if not set)
   const port = process.env.PORT;
 
